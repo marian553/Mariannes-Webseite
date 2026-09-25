@@ -8,10 +8,21 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#1F3A18">
 <meta name="robots" content="index, follow">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+  /* Schriften lokal eingebunden – keine Verbindung zu Google (DSGVO) */
+  @font-face{ font-family:'Fraunces'; font-style:italic; font-weight:500 900; font-display:swap;
+    src:url('fonts/fraunces-italic-latin-ext.woff2') format('woff2'); unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face{ font-family:'Fraunces'; font-style:italic; font-weight:500 900; font-display:swap;
+    src:url('fonts/fraunces-italic-latin.woff2') format('woff2'); unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face{ font-family:'Fraunces'; font-style:normal; font-weight:500 900; font-display:swap;
+    src:url('fonts/fraunces-latin-ext.woff2') format('woff2'); unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face{ font-family:'Fraunces'; font-style:normal; font-weight:500 900; font-display:swap;
+    src:url('fonts/fraunces-latin.woff2') format('woff2'); unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face{ font-family:'Work Sans'; font-style:normal; font-weight:400 700; font-display:swap;
+    src:url('fonts/work-sans-latin-ext.woff2') format('woff2'); unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face{ font-family:'Work Sans'; font-style:normal; font-weight:400 700; font-display:swap;
+    src:url('fonts/work-sans-latin.woff2') format('woff2'); unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
   :root{
     --forest-dark:#1F3A18;
     --forest:#2C5924;
@@ -134,21 +145,11 @@
 
       <h2>Kontakt</h2>
       <p>
-        Telefon: <a href="tel:+4917029 60193">0170 2960193</a><br>
+        Telefon: <a href="tel:+491702960193">0170 2960193</a><br>
         E-Mail: <a href="mailto:Mariannebauer3@gmx.de">Mariannebauer3@gmx.de</a>
       </p>
 
-      <h2>Umsatzsteuer-ID</h2>
-      <p>
-        Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
-        <em>[Bitte eintragen – falls keine USt-ID vorhanden: Hinweis auf Kleinunternehmerregelung nach § 19 UStG ergänzen]</em>
-      </p>
-
-      <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
-      <p>
-        Berufsbezeichnung: <em>[z. B. Coach / Beraterin – bitte eintragen]</em><br>
-        Verliehen in: Deutschland
-      </p>
+      <h2>Hinweis zum Angebot</h2>
       <p>
         Es handelt sich nicht um eine Heilbehandlung im Sinne des Heilpraktikergesetzes. Die Angebote ersetzen keine
         ärztliche oder psychotherapeutische Behandlung.
@@ -160,12 +161,6 @@
         Lauterbachstr. 10<br>
         95158 Kirchenlamitz
       </address>
-
-      <h2>Streitschlichtung</h2>
-      <p>
-        Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
-        teilzunehmen.
-      </p>
 
       <h2>Haftung für Inhalte</h2>
       <p>
@@ -216,12 +211,6 @@
         von KI-Systemen und zur damit verbundenen Datenverarbeitung finden Sie in unserer
         <a href="datenschutz.html">Datenschutzerklärung</a>.
       </p>
-
-      <div class="note">
-        <strong>Hinweis für den Webmaster:</strong> Die mit <em>[…]</em> markierten Stellen müssen vor Veröffentlichung
-        durch die tatsächlichen Angaben ersetzt oder entfernt werden. Dieser Text ist eine Vorlage und ersetzt keine
-        Rechtsberatung – bitte vor dem Livegang anwaltlich prüfen lassen.
-      </div>
 
     </div>
   </div>

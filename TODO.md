@@ -5,7 +5,7 @@ sind **vor dem Livegang zwingend**.
 
 ---
 
-## 1. Google Fonts lokal hosten (rechtlich kritisch)
+## 1. ~~Google Fonts lokal hosten~~ — erledigt (liegen unter `/fonts`)
 
 **Problem:** `index.html`, `danke.html`, `impressum.html` und `datenschutz.html` laden
 Fraunces und Work Sans von `fonts.googleapis.com`. Dabei geht die IP-Adresse jedes
@@ -47,9 +47,8 @@ namentlich eingetragen werden.
 
 In `impressum.html` und `datenschutz.html` stehen Platzhalter in eckigen Klammern.
 
-**In `impressum.html`:**
-- [ ] USt-ID — oder Hinweis auf Kleinunternehmerregelung § 19 UStG
-- [ ] Berufsbezeichnung
+**In `impressum.html`:** erledigt (USt-ID, Berufsbezeichnung und Streitschlichtung
+entfernt, da für Marianne nicht zutreffend).
 
 **In `datenschutz.html`:**
 - [ ] Abschnitt 3: Hosting-Anbieter → **Netlify, Inc., 512 2nd Street, Suite 200,
@@ -117,3 +116,4 @@ da es für den Largest Contentful Paint verantwortlich ist.
 - `loading="lazy"` und feste Bildmaße gegen Layout-Sprünge
 - Impressum nach aktueller Rechtslage: kein Verweis mehr auf die zum 20.07.2025
   abgeschaltete EU-Streitbeilegungsplattform
+- Schriften Fraunces und Work Sans lokal unter `/fonts` statt von Google
