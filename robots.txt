@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Rechtsseiten und Dankeseite nicht indexieren
+Disallow: /danke.html
+
+# TODO: echte Domain eintragen
+Sitemap: https://DEINE-DOMAIN.de/sitemap.xml

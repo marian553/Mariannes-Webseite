@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schön, dass du da bist! – Marianne Bauer</title>
+<meta name="description" content="Deine Anmeldung zur 7-Tage-Entdeckungsreise ist da. Lade dir jetzt dein Journal herunter.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest-dark:#1F3A18;
+    --forest:#2C5924;
+    --leaf:#4C8C3C;
+    --gold:#F2B705;
+    --gold-deep:#C98F02;
+    --gold-soft:#FBEBB5;
+    --cream:#F8F5EA;
+    --ink:#2A2A22;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:#1a2f14;
+    color:#fff;
+    font-family:'Work Sans', sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    color:#fff;
+    font-size:clamp(1.9rem, 4.4vw, 2.9rem);
+    line-height:1.14;
+    margin:0 0 14px;
+    max-width:18ch;
+  }
+  .danke{
+    position:relative;
+    min-height:100svh;
+    overflow:hidden;
+  }
+  .danke-bg{
+    position:absolute; inset:0;
+    background-image:url('images/dankeseite-hintergrund.jpg');
+    background-size:cover;
+    background-position:center 30%;
+  }
+  .danke-scrim{
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(20,38,15,0.82) 0%, rgba(15,28,11,0.94) 100%);
+  }
+  .danke-content{
+    position:relative;
+    z-index:2;
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:80px 24px;
+  }
+  .danke-check{
+    width:64px; height:64px;
+    border-radius:50%;
+    background:var(--gold);
+    color:var(--forest-dark);
+    display:flex; align-items:center; justify-content:center;
+    font-size:30px; font-weight:900;
+    margin-bottom:20px;
+    box-shadow:0 12px 28px rgba(242,183,5,0.4);
+    animation: softPulse 3.6s ease-in-out infinite;
+  }
+  @keyframes softPulse{
+    0%,100%{ transform:scale(1); }
+    50%{ transform:scale(1.06); }
+  }
+  .eyebrow{
+    display:inline-flex;
+    justify-content:center;
+    font-weight:700;
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--gold-soft);
+    margin-bottom:10px;
+  }
+  .danke-sub{
+    color:#F3F0E4;
+    font-size:1.1rem;
+    max-width:44ch;
+    margin:0 0 32px;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:17px 32px;
+    background:linear-gradient(135deg, var(--gold) 0%, var(--gold-deep) 100%);
+    color:var(--forest-dark);
+    font-family:'Work Sans', sans-serif;
+    font-weight:700;
+    font-size:17px;
+    border:none;
+    border-radius:999px;
+    cursor:pointer;
+    box-shadow:0 10px 24px rgba(201,143,2,0.32);
+    transition:transform .18s ease, box-shadow .18s ease, filter .18s ease;
+    text-decoration:none;
+  }
+  .btn:hover{ transform:translateY(-2px); box-shadow:0 14px 30px rgba(201,143,2,0.42); filter:brightness(1.06); }
+  .danke-filesize{
+    font-size:0.82rem;
+    color:#C9C3AC;
+    margin-top:14px;
+  }
+  .danke-hint{
+    margin-top:40px;
+    max-width:48ch;
+    font-size:0.95rem;
+    color:#CBD4C2;
+    border-top:1px solid rgba(255,255,255,0.16);
+    padding-top:24px;
+  }
+  .danke-back{
+    margin-top:30px;
+    color:#D8D2BC;
+    font-size:0.88rem;
+    text-decoration:underline;
+    opacity:0.85;
+  }
+  .danke-back:hover{ opacity:1; }
+  @media (prefers-reduced-motion: reduce){
+    .danke-check{ animation:none; }
+    .btn{ transition:none; }
+  }
+</style>
+</head>
+<body>
+
+<section class="danke">
+  <div class="danke-bg"></div>
+  <div class="danke-scrim"></div>
+  <div class="danke-content">
+    <div class="danke-check">&#10003;</div>
+    <div class="eyebrow">Deine Anmeldung ist da</div>
+    <h1 id="dankeName">Schön, dass du da bist!</h1>
+    <p class="danke-sub">Dein Journal wartet schon auf dich &ndash; lad es dir direkt herunter und starte, wann immer du bereit bist.</p>
+
+    <a class="btn" href="downloads/7-tage-entdeckungsreise.pdf"
+       download="Raus-aus-der-Erschoepfung-7-Tage-Journal-Marianne-Bauer.pdf">
+      &#8681; Jetzt Freebie herunterladen
+    </a>
+    <p class="danke-filesize">PDF &middot; ca. 0,7 MB &middot; kommt zusätzlich auch per E-Mail an dich</p>
+
+    <p class="danke-hint">
+      <strong>Wichtig:</strong> Schau bitte in dein Postfach und bestätige die Anmeldung über den Link in meiner
+      E-Mail. Erst danach kann ich dir die 7 Tage schicken. Falls nichts ankommt, wirf einen Blick in den
+      Spam-Ordner.
+    </p>
+
+    <a class="danke-back" href="index.html">&larr; zurück zur Seite</a>
+  </div>
+</section>
+
+<script>
+  // Personalisierung, falls der Newsletter-Dienst den Vornamen als ?name= übergibt
+  (function(){
+    var params = new URLSearchParams(window.location.search);
+    var name = (params.get('name') || '').trim();
+    if(name){
+      var clean = name.replace(/[<>]/g, '').slice(0, 40);
+      document.getElementById('dankeName').textContent = 'Schön, dass du da bist, ' + clean + '!';
+    }
+  })();
+</script>
+
+</body>
+</html>

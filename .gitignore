@@ -1,0 +1,14 @@
+# Betriebssystem
+.DS_Store
+Thumbs.db
+
+# Editoren
+.vscode/
+.idea/
+*.swp
+
+# Netlify
+.netlify/
+
+# Abhängigkeiten (falls später ein Build dazukommt)
+node_modules/
