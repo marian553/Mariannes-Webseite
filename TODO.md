@@ -50,16 +50,10 @@ In `impressum.html` und `datenschutz.html` stehen Platzhalter in eckigen Klammer
 **In `impressum.html`:** erledigt (USt-ID, Berufsbezeichnung und Streitschlichtung
 entfernt, da für Marianne nicht zutreffend).
 
-**In `datenschutz.html`:**
-- [ ] Abschnitt 3: Hosting-Anbieter → **Netlify, Inc., 512 2nd Street, Suite 200,
-      San Francisco, CA 94107, USA** (Drittlandtransfer, Abschnitt 16 deckt das ab)
-- [ ] Abschnitt 4: Consent-Tool (nur falls Tracking eingesetzt wird)
-- [ ] Abschnitt 6: Newsletter-Anbieter aus Punkt 2
-- [ ] Abschnitt 7.2: nicht genutzte KI-Anbieter streichen
-- [ ] Abschnitt 20: Stand-Datum eintragen
-- [ ] **Ganze Abschnitte löschen**, wenn der Dienst nicht eingesetzt wird:
-      8 (Chatbot), 11 (Terminbuchung), 12 (Zahlungsanbieter), 13 (Mitgliederbereich),
-      14 (Affiliate)
+**In `datenschutz.html`:** erledigt (Netlify als Hoster, Brevo als Newsletter-Dienst,
+nur Anthropic als KI-Anbieter, keine Cookies, nicht genutzte Abschnitte gelöscht).
+Offen: Links zu Instagram und Facebook auf der Seite einbauen — die Datenschutzerklärung
+beschreibt sie bereits.
 
 > Eine Datenschutzerklärung darf nur beschreiben, was tatsächlich läuft. Abschnitte
 > über nicht genutzte Dienste sind kein „sicherer Puffer", sondern schlicht falsch.
