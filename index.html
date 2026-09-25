@@ -886,6 +886,9 @@
   }
   .foot-mail:hover{ color:var(--gold-soft); }
   .foot-region{ margin-top:8px; color:#A9B79F; }
+  .foot-social{ display:flex; flex-wrap:wrap; justify-content:flex-end; gap:6px 18px; margin-top:12px; }
+  .foot-social a{ color:var(--gold-soft); text-decoration:none; }
+  .foot-social a:hover{ text-decoration:underline; }
   .foot-bottom{
     margin-top:34px;
     padding-top:20px;
@@ -901,6 +904,7 @@
   @media (max-width:640px){
     .site-footer .wrap{ flex-direction:column; align-items:flex-start; }
     .foot-meta{ text-align:left; }
+    .foot-social{ justify-content:flex-start; }
     .foot-bottom{ gap:14px; }
   }
 
@@ -1273,6 +1277,12 @@
     <div class="foot-meta">
       <a href="mailto:Mariannebauer3@gmx.de" class="foot-mail">Mariannebauer3@gmx.de</a>
       <div class="foot-region">Fichtelgebirge &middot; Oberfranken &middot; Bayern</div>
+      <nav class="foot-social" aria-label="Marianne Bauer in sozialen Netzwerken">
+        <a href="https://www.instagram.com/marianne_bauer_333/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.facebook.com/farbstilberatungmariannebauer/" target="_blank" rel="noopener noreferrer">Facebook: Farbstilberatung</a>
+        <a href="https://www.facebook.com/kreativeaktiveberatung/" target="_blank" rel="noopener noreferrer">Facebook: Kreativ-Aktive Beratung</a>
+        <a href="https://www.linkedin.com/in/marianne-frieda-bauer-1b8443222/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </nav>
     </div>
   </div>
   <div class="wrap foot-bottom">

@@ -52,8 +52,8 @@ entfernt, da für Marianne nicht zutreffend).
 
 **In `datenschutz.html`:** erledigt (Netlify als Hoster, Brevo als Newsletter-Dienst,
 nur Anthropic als KI-Anbieter, keine Cookies, nicht genutzte Abschnitte gelöscht).
-Offen: Links zu Instagram und Facebook auf der Seite einbauen — die Datenschutzerklärung
-beschreibt sie bereits.
+Links zu Instagram, Facebook (zwei Seiten) und LinkedIn stehen im Fußbereich und sind
+in der Datenschutzerklärung beschrieben.
 
 > Eine Datenschutzerklärung darf nur beschreiben, was tatsächlich läuft. Abschnitte
 > über nicht genutzte Dienste sind kein „sicherer Puffer", sondern schlicht falsch.
