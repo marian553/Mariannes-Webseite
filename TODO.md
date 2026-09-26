@@ -63,12 +63,7 @@ Rechtsberatung. Vor dem Livegang anwaltlich prüfen lassen.
 
 ---
 
-## 4. Domain eintragen
-
-Die echte Domain ersetzt `DEINE-DOMAIN.de` in:
-- [ ] `index.html` → `<link rel="canonical">` und alle `og:`-Tags
-- [ ] `robots.txt` → Sitemap-Zeile
-- [ ] `sitemap.xml` → alle drei `<loc>`-Einträge
+## 4. ~~Domain eintragen~~ — erledigt (`mariannebauer.de`)
 
 ---
 
