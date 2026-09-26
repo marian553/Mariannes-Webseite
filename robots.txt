@@ -4,5 +4,4 @@ Allow: /
 # Rechtsseiten und Dankeseite nicht indexieren
 Disallow: /danke.html
 
-# TODO: echte Domain eintragen
 Sitemap: https://mariannebauer.de/sitemap.xml
