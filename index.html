@@ -204,37 +204,73 @@
     margin:18px 0 34px;
   }
 
-  /* Video-Platzhalter */
-  .video-placeholder{
+  /* Video (YouTube-Short, hochkant) – lädt erst nach Klick (Zwei-Klick-Lösung, DSGVO) */
+  .hero-video{
     position:absolute;
-    top:28px; right:28px;
+    top:80px;                                   /* ca. 2 cm Abstand nach oben */
+    right:max(40px, calc((100% - 1040px) / 2 + 24px));
     z-index:3;
-    width:220px;
-    aspect-ratio:16/9;
-    border-radius:16px;
-    border:2px dashed rgba(255,255,255,0.55);
-    background:rgba(20,38,15,0.38);
+    width:clamp(230px, 23vw, 310px);
+    aspect-ratio:9/16;
+    border-radius:20px;
+    overflow:hidden;
+    background:var(--forest-dark);
+    box-shadow:0 24px 60px rgba(0,0,0,0.45);
+    border:2px solid rgba(251,235,181,0.55);
+  }
+  .hero-video iframe{ width:100%; height:100%; border:0; display:block; }
+  .video-start{
+    position:relative;
+    width:100%; height:100%;
+    padding:0; border:0; cursor:pointer;
+    background:var(--forest-dark);
+    color:#fff;
+    font:inherit;
+  }
+  .video-start img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    opacity:0.72;
+  }
+  .video-start::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(20,38,15,0.15) 30%, rgba(15,28,11,0.85) 100%);
+  }
+  .video-start-inner{
+    position:absolute; left:0; right:0; bottom:22px;
+    z-index:1;
+    display:flex; flex-direction:column; align-items:center; gap:10px;
+    padding:0 16px;
+    text-align:center;
+  }
+  .video-start .play-icon{
+    width:66px; height:66px;
+    border-radius:50%;
+    background:linear-gradient(135deg, var(--gold), var(--gold-deep));
+    color:var(--forest-dark);
     display:flex; align-items:center; justify-content:center;
+    font-size:24px;
+    padding-left:4px;
+    box-shadow:0 10px 26px rgba(0,0,0,0.35);
+    transition:transform .18s ease;
     animation: softPulse 5s ease-in-out infinite;
   }
-  .video-placeholder-inner{ text-align:center; color:#F3EFE0; padding:0 10px; }
-  .video-placeholder .play-icon{
-    width:40px; height:40px;
-    margin:0 auto 8px;
-    border-radius:50%;
-    background:rgba(255,255,255,0.2);
-    display:flex; align-items:center; justify-content:center;
-    font-size:14px;
-    color:#fff;
-  }
-  .video-placeholder .video-label{
-    font-size:0.76rem; font-weight:600; letter-spacing:.01em; line-height:1.35;
-    display:block;
-  }
+  .video-start:hover .play-icon,
+  .video-start:focus-visible .play-icon{ transform:scale(1.08); }
+  .video-start:focus-visible{ outline:3px solid var(--gold); outline-offset:-3px; }
+  .video-start .video-label{ font-weight:600; font-size:1rem; }
+  .video-start .video-note{ font-size:0.72rem; line-height:1.35; color:#E3E9DC; max-width:24ch; }
   @media (max-width:820px){
-    .video-placeholder{ width:148px; top:16px; right:16px; }
-    .video-placeholder .video-label{ font-size:0.65rem; }
-    .video-placeholder .play-icon{ width:30px; height:30px; margin-bottom:5px; }
+    .hero{ flex-direction:column; align-items:stretch; justify-content:space-between; }
+    .hero-video{
+      position:relative;
+      top:auto; right:auto;
+      margin:80px auto 0;
+      width:min(72vw, 300px);
+    }
+    .hero-inner{ padding-top:40px; }
   }
 
   @keyframes nameShimmer{
@@ -662,7 +698,7 @@
     .flip-pulse{ animation:none; }
     .flip-inner{ transition:none; }
     .signoff-name{ animation:none; }
-    .video-placeholder{ animation:none; }
+    .video-start .play-icon{ animation:none; }
     .hero-bg{ animation:none; }
     .trail-step:nth-child(1) .trail-photo img{ animation:none; }
     .trail-step:nth-child(3) .trail-photo img{ animation:none; }
@@ -988,11 +1024,15 @@
   <div class="hero-bg"></div>
   <div class="hero-scrim"></div>
 
-  <div class="video-placeholder" aria-label="Platzhalter für dein Video">
-    <div class="video-placeholder-inner">
-      <span class="play-icon">&#9658;</span>
-      <span class="video-label">Dein Video<br>kommt hier hin</span>
-    </div>
+  <div class="hero-video" id="heroVideo">
+    <button type="button" class="video-start" id="videoStart" aria-label="Video von Marianne abspielen (lädt YouTube)">
+      <img src="images/marianne-portrait.jpg" alt="" width="600" height="800" loading="eager">
+      <span class="video-start-inner">
+        <span class="play-icon" aria-hidden="true">&#9654;</span>
+        <span class="video-label">Video ansehen</span>
+        <span class="video-note">Beim Abspielen wird YouTube geladen. Mehr in der Datenschutzerklärung.</span>
+      </span>
+    </button>
   </div>
 
   <div class="hero-inner">
@@ -1311,6 +1351,20 @@
   // Footer-Jahr automatisch aktualisieren
   var fy = document.getElementById('footYear');
   if(fy){ fy.textContent = new Date().getFullYear(); }
+
+  // Video erst nach Klick laden – vorher keine Verbindung zu YouTube/Google
+  (function(){
+    var start = document.getElementById('videoStart');
+    if(!start) return;
+    start.addEventListener('click', function(){
+      var frame = document.createElement('iframe');
+      frame.src = 'https://www.youtube-nocookie.com/embed/riUD1suqYTg?autoplay=1&rel=0&playsinline=1';
+      frame.title = 'Video von Marianne Bauer';
+      frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      frame.allowFullscreen = true;
+      start.replaceWith(frame);
+    });
+  })();
 </script>
 
 </body>
