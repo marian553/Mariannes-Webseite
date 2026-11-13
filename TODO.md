@@ -21,7 +21,11 @@ Az. 3 O 17493/20), der aktiv abgemahnt wird.
 
 ---
 
-## 2. Formular an den Newsletter-Dienst anbinden
+## 2. Formular an den Newsletter-Dienst anbinden (Brevo, in den nächsten Tagen)
+
+**Beim Anbinden zurückholen:** In `datenschutz.html` Abschnitt Newsletter wieder Brevo
+und Double-Opt-In beschreiben; auf `danke.html` den Hinweis auf die Bestätigungsmail ergänzen.
+Derzeit landen Anmeldungen nur in Netlify Forms, das Journal gibt es per Download auf `/danke`.
 
 **Aktueller Stand:** Das Formular ist für **Netlify Forms** vorbereitet
 (`data-netlify="true"`, Honeypot gegen Bots, Weiterleitung auf `/danke`).
